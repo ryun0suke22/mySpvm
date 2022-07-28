@@ -1,0 +1,22 @@
+# lib/SPVM/FizzBuzz.spvm
+class FizzBuzz {
+  static method get_fizz_buzz : int ($nums : int[]) {
+
+    for (my $i = 0; $i < @$nums; $i++) {
+      my $n = $nums->[$i];
+      if ($n % 3 == 0 && $n % 5 == 0) {
+           print "FizzBuzz\n";
+       }
+       elsif ($n % 5 == 0) {
+           print "Buzz\n";
+       }
+       elsif ($n % 3 == 0) {
+           print "Fizz\n";
+       }
+       else {
+           print "$n\n";
+       }
+    }
+
+  }
+}
